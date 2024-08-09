@@ -1,28 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
 :root {
-  --navbar-white: white;
+  --background-cream: #ebe6d9; /*f9f5e9*/
   --primary-black: black;
+  --light-green: #739072;
+  --medium-green: #4F6F52;
+  --dark-green: #3A4D39;
 }
 
 body {
   font-family: "Caveat", cursive;
   font-optical-sizing: auto;
+  background-color: var(--background-cream);
 }
 
-/* Navbar */
+/* -------------Navbar----------------- */
 .logo {
   width: 16.25rem;
   height: 6rem;
-  background-color: var(--navbar-white);
 }
 
-/* Menu Links */ 
+.navbar {
+  background-color: var(--background-cream);
+}
+
+/* -------------Menu Links-------------- */ 
 nav a.nav-link {
   font-family: "Caveat", cursive;
   font-weight: 700;
   letter-spacing: 0.04rem;
   cursor: pointer;
+  font-size: larger;
 }
 
 nav ul li {
@@ -33,7 +41,7 @@ nav ul li {
   color: var(--primary-black);
   margin-right: 0.75rem;
   margin-left: 0.75rem;
-  border-bottom: 0.1875rem solid var(--navbar-white);
+  border-bottom: 0.1875rem solid var(--background-cream);
 }
 
 .navbar-brand {
@@ -42,5 +50,83 @@ nav ul li {
 }
 
 .navbar-nav > li > a:hover {
-  border-bottom: 0.1875rem solid var(--primary-black);
+  border-bottom: 0.1875rem solid var(--medium-green);
+}
+
+/* -------------Header-------------- */
+.header-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh;
+  background-color: var(--background-cream);
+  padding: 0 10rem 0 10rem;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Caveat", cursive;
+  background-color: var(--background-cream);
+}
+
+.main-info h1 {
+  color: var(--medium-green);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#avatar-img {
+  height: 30vh;
+  width: auto;
+}
+
+@media(max-width: 768px) {
+  .main-info h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* -------------Cards-------------- */
+.card-section {
+  background-color: var(--background-cream);
+}
+
+.card-header {
+  text-align: center;
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  color: var(--dark-green);
+}
+
+.card {
+  width: 18rem;
+  background-color: var(--light-green);
+  border: none;
+  border-radius: 0.01rem;
+  box-shadow: o 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  max-width: 25%;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--background-cream);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
