@@ -58,7 +58,7 @@ nav ul li {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 50vh;
+  height: 80vh;
   background-color: var(--background-cream);
   padding: 0 10rem 0 10rem;
 }
@@ -77,11 +77,7 @@ nav ul li {
   color: var(--medium-green);
   text-transform: uppercase;
   font-weight: bold;
-}
-
-#avatar-img {
-  height: 30vh;
-  width: auto;
+  font-size: xx-large;
 }
 
 @media(max-width: 768px) {
@@ -95,10 +91,14 @@ nav ul li {
   background-color: var(--background-cream);
 }
 
-.card-header {
+.section-title {
   text-align: center;
   font-family: "Caveat", cursive;
-  font-weight: 600;
+  font-weight: 600; 
+}
+
+.card-header > h1 {
+  padding-top: 2rem;
   color: var(--dark-green);
 }
 
@@ -107,7 +107,7 @@ nav ul li {
   background-color: var(--light-green);
   border: none;
   border-radius: 0.01rem;
-  box-shadow: o 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
   max-width: 25%;
 }
@@ -126,7 +126,82 @@ nav ul li {
 }
 
 .card-img {
-  width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  width: 90%;
+  height: 90%;
+  border-radius: 2rem;
+}
+
+/* -------------About-------------- */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--dark-green);
+  height: 70vh;
+}
+
+.bitmoji {
+  height: 35vh;
+}
+
+.about-paragraph {
+  color: white;
+  font-family: "Caveat", cursive;
+  font-size: x-large;
+}
+
+.about-paragraph button {
+  text-align: center;
+}
+
+/* -------------Contact-------------- */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--dark-green);
+  padding: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+textarea, input:not([type='submit']) {
+  height: 50px;
+  padding-left: 16px;
+  width: 250px;
+}
+
+textarea {
+  padding-top: 16px;
+  resize: none;
+  height: 250px;
+}
+
+input, textarea {
+  border-radius: 20px;
+  border: 1px solid var(--background-cream);
+  box-sizing: border-box;
+  justify-self: center;
+  background-color: var(--dark-green);
+  color: var(--background-cream);
+}
+
+::placeholder {
+  color: var(--background-cream);
+}
+
+input[type='submit'] {
+  background-color: var(--background-cream);
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  color: var(--dark-green);
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  font-size: larger;
 }
